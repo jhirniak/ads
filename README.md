@@ -2,6 +2,6 @@
 
 ## Format
 
-- type
-- - algorithm / data structure
-- - - language in which implemented
+* type
+.* algorithm / data structure
+..* language in which implemented
