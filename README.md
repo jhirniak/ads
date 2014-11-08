@@ -3,5 +3,5 @@
 ## Format
 
 * type
-.* algorithm / data structure
-..* language in which implemented
+  * algorithm / data structure
+    * language in which implemented
