@@ -13,6 +13,10 @@ struct node {
   struct node *left, *right;
 };
 
+/**
+ * level order traversal is same as breath first search
+ * queue is used to put and take off elements in order
+ */
 void levelOrderTraversal(node *root) {
   queue<node*> q;
 
