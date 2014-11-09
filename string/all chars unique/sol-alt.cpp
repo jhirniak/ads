@@ -34,6 +34,11 @@ node* newNode(char item) {
   return node;
 }
 
+/**
+ * returns true if new node was inserted
+ * returns false if node with item already existed
+ * (and hence did not insert)
+ */
 bool insert(node* root, char item) {
   while (root) {
     if (item < root->item) {
@@ -56,20 +61,6 @@ bool insert(node* root, char item) {
   }
 
   root = newNode(item);
-  return false;
-}
-
-bool contains(node* root, char item) {
-  while (root) {
-    if (root->item < item) {
-      root = root->right;
-    } else if (root->item > item) {
-      root = root->left;
-    } else {
-      return true;
-    }
-  }
-
   return false;
 }
 
