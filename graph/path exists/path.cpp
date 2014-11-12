@@ -1,3 +1,8 @@
+/**
+ * by Jaroslaw Hirniak
+ * 12 November 2014
+ */
+
 #define DEBUG
 
 #include <iostream>
