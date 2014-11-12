@@ -1,3 +1,8 @@
+/**
+ * by Jaroslaw Hirniak
+ * 11 November 2014
+ */
+
 #define DEBUG
 
 #include "pq.h"

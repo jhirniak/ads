@@ -1,3 +1,8 @@
+/**
+ * by Jaroslaw Hirniak
+ * 11 November 2014
+ */
+
 #include <vector>
 #include <limits>
 
