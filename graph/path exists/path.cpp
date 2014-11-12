@@ -12,6 +12,9 @@ struct node {
   vector<node<T>*> out;
 };
 
+/**
+ * Use DFS using activation stack and list of visited vertices
+ */
 template <typename T>
 bool connected(node<T> *start, node<T> *end, set<node<T>*> *visited = new set<node<T>*>) {
   if (visited->find(start) != visited->end()) {
