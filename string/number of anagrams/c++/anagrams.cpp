@@ -11,23 +11,15 @@
 using namespace std;
 
 string sortChars(string word) {
-  vector<char> chars;
-
-  for (auto c : word) {
-    chars.push_back(c);
-  }
-
-  sort(chars.begin(), chars.end());
-
-  string sortedWord;
-  
-  for (auto c : chars) {
-    sortedWord.push_back(c);
-  }
-
-  return sortedWord;
+  sort(word.begin(), word.end());
+  return word;
 }
 
+/**
+ * Given list of words returns the number of words
+ * that are anagrams of some previously seen words
+ * in a list.
+ */
 unsigned int anagrams(vector<string> words) {
   unsigned int anagrams = 0;
   set<string> seen;
@@ -51,7 +43,8 @@ int main() {
   vector<vector<string>> problems {
     { "abab", "baba", "cyce", "ecyc", "yxz", "zxy" },
     { "abc", "def", "ghi", "jkl", "mno" },
-    { "zzz", "yyy", "zyz", "yzy" }
+    { "zzz", "yyy", "zyz", "yzy" },
+    { "zaz", "azz", "zza", "zaz", "azz", "az", "za" }
   };
 
   for (auto p : problems) {
