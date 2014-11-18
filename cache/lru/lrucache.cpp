@@ -1,3 +1,20 @@
+/**
+ * by Jaroslaw Hirniak
+ * 18 November 2014
+ *
+ * LRU (Least Recently Used) Cache implementation with
+ *  . get(Key key) in O(1) and
+ *  . put(Key key) in O(1) time
+ * assuming only constant cache size (not requirement,
+ * sice otherwise amortized constant time).
+ *
+ * Performance is achieved via keeping pointers (iterators)
+ * to LL (linked list) elements what allows for O(1) time
+ * promotion to the front on get of any element and
+ * for quick discarding by removing the last element
+ * from the list.
+ */
+
 #include <iostream>
 #include <list>
 #include <unordered_map>
