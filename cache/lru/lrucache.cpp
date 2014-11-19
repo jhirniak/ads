@@ -15,6 +15,8 @@
  * from the list.
  */
 
+#define DEBUG
+
 #include <iostream>
 #include <list>
 #include <unordered_map>
@@ -95,6 +97,9 @@ void LRUCache<K, V>::put(K k, V v) {
 }
 
 int main() {
+
+  #ifdef DEBUG
+
   LRUCache<int, string> cache(3);
   cache.put(0, "Ala ma kota!");
   cache.put(1, "Kot ma ale!");
@@ -104,5 +109,16 @@ int main() {
   cout << cache.get(1) << endl;
   cout << cache.get(2) << endl;
   cout << cache.get(3) << endl;
+
+  cache.get(1); // now k = 2 is LRU
+  cache.put(100, "I am dropping by to replace k = 2.");
+  cout << cache.get(1) << endl
+       << cache.get(3) << endl
+       << cache.get(100) << endl;
+
+  // cout << cache.get(2) << endl; // throws not in cache error as expected
+  
+  #endif
+
   return 0;
 }
